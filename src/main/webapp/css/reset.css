@@ -1,0 +1,123 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+body,html {
+    height:100%;
+    background: #fbfbfa;
+}
+body, button, input, select, textarea {
+    font-family: Microsoft Yahei, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:focus{outline:none;}
+ul, ol ,li {
+    list-style: none;
+}
+
+.text-danger {
+    color: #f00
+}
+
+.text-normal {
+    color: #7bc054
+}
+
+.text-warn {
+    color: #eab542;
+}
+/*单选按钮*/
+.radio_switch {
+    display: none;
+}
+
+.radio_switch_slider {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.radio_switch_slider .r_swi_check {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.radio_switch_slider span {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.radio_switch:checked+.radio_switch_slider .r_swi_check:before {
+    position: absolute;
+    content: '';
+    top: 3px;
+    left: 2px;
+    display: block;
+    width: 13px;
+    height: 8px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.radio_switch:checked+.radio_switch_slider .r_swi_check {
+    border: 1px solid #007bbb;
+    background: #007bbb;
+}
+/*复选按钮*/
+.check_switch { 
+    display:none;
+}
+.check_switch_slider .swi_check { 
+    display:inline-block; 
+    width:19px; 
+    height:19px; 
+    background:#fff; 
+    border:1px solid #cccccc; 
+    margin-right:10px; 
+    font-size:16px;
+}
+.check_switch_slider span {
+    width:19px; 
+    height:19px; 
+    position:relative; 
+    top:3px;
+}
+.check_switch +.check_switch_slider .swi_check .checked{ position:absolute;
+    content:''; 
+    top:2px; 
+    left:-999999px; 
+    z-index:999;
+    width:14px; 
+    height:9px; 
+    border-left:1px solid #007bbb; 
+    border-bottom:1px solid #007bbb; 
+    -webkit-transform:rotate(-45deg); 
+    -moz-transform:rotate(-45deg); 
+    -o-transform:rotate(-45deg); 
+    transform:rotate(-45deg);
+}
+.check_switch:checked +.check_switch_slider .swi_check .checked {
+    top:2px; 
+    left:2px;
+}
+.check_switch:checked +.check_switch_slider .swi_check {
+    border:1px solid #007bbb;
+}

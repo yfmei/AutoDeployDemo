@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <title>自动巡检</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>自动巡检</title>
+    <link href="" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/icon-style.css" rel="stylesheet"  type="text/css" >
+    <link href="css/plugin/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="css/ais.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
+    <script type="text/javascript"  src="js/plugin/moment.js"></script>
+    <script type="text/javascript"  src="js/plugin/daterangepicker.js"></script>
+  </head>
+  <body>
+  <!--头部-->
+  <div class="container-fluid topbar">
+    <div class="row topbar-row">
+      <div class="pull-left">你好，王小青，&nbsp;<a href="#">退出</a></div>
+      <div class="pull-right">
+        <a href="#">业务监控</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#">数据分析</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#">宽带地图</a>
+      </div>
+    </div>
+  </div>
+<!--内容区域-->
+
+  <div class="container dap-ais-mainarea">
+    <!--标题-->
+  <div class="dap-ais-mainttl">
+    <i class="icon fa fa-cogs"></i>&nbsp;&nbsp;宽带巡检助手
+  </div>
+    <div class="dap-ais-mainarea-bg">
+    <!--巡检项定义START-->
+    <div class="dap-ais-category-set-ttl">
+      <h2>巡检项定义</h2>
+    </div>
+    <!--业务量START-->
+    <div id="" class="dap-ais-category-set-box">
+      <div class="dap-ais-category-ttl" >
+        <!--类型图标START-->
+        <div class="dap-ais-category-ico-box">
+          <!-- <div class="dap-ais-rotate rotate"></div> -->
+          <div class="dap-ais-category-ico">
+            <span class="icon-ywqk"></span>
+          </div>
+          <div class="dap-ais-category-checkbox" >
+            <input type="checkbox" name="checkbox" id="checkbox1" class="check_switch">
+            <label for="checkbox1" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+          </div>
+        </div>
+        <!--类型图标END-->
+        <!--类型名称START-->
+        <div class="dap-ais-category-ttl-con" data-toggle="collapse" data-parent="#accordion" data-target="#categoryList1">
+          <h3>业务量情况</h3>
+          <div class="dap-ais-category-info">共5项，已选择<span class="c-orange">5项</span></div>
+          <div class="dap-ais-collapse-btn"><i class="fa fa-angle-up"></i></div>
+        </div><div class="clearfix"></div>
+        <!--类型名称END-->
+      </div>
+      <!--列表START-->
+      <div id="categoryList1" class="panel-collapse collapse in dap-ais-category-list">
+        <ul class="row">
+          <li class="">
+            <div class="dap-ais-category-outer" >
+              <!-- <div class="dap-ais-category-border"  ></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/rzqq.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk1-1" class="check_switch">
+                    <label for="cateChk1-1" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">认证请求</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">6台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/jfqq.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk1-2" class="check_switch" >
+                    <label for="cateChk1-2" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">计费请求</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">6台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border" ></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/ymqq.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk1-3" class="check_switch" >
+                    <label for="cateChk1-3" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">页面请求</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">3台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/dxqq.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk1-4" class="check_switch" >
+                    <label for="cateChk1-4" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">短信请求</p>
+                <p class="ma-num"  data-toggle="modal" data-target="#myModal">2台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/slqq.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk1-5" class="check_switch" >
+                    <label for="cateChk1-5" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">受理请求</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2台</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--列表END-->
+    </div>
+    <!--业务量END-->
+    <!--网络设备情况START-->
+    <div id="" class="dap-ais-category-set-box">
+      <div class="dap-ais-category-ttl" >
+        <!--类型图标START-->
+        <div class="dap-ais-category-ico-box">
+          <!-- <div class="dap-ais-rotate rotate"></div> -->
+          <div class="dap-ais-category-ico">
+            <span class="icon-wlsbqk"></span>
+          </div>
+          <div class="dap-ais-category-checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox2"  class="check_switch">
+            <label for="checkbox2" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+          </div>
+        </div>
+        <!--类型图标END-->
+        <!--类型名称START-->
+        <div class="dap-ais-category-ttl-con" data-toggle="collapse" data-parent="#accordion" data-target="#categoryList2">
+          <h3>网络设备情况</h3>
+          <div class="dap-ais-category-info">共8项，已选择<span class="c-orange">8项</span></div>
+          <div class="dap-ais-collapse-btn"><i class="fa fa-angle-up"></i></div>
+        </div><div class="clearfix"></div>
+        <!--类型名称END-->
+      </div>
+      <!--列表START-->
+      <div id="categoryList2" class="panel-collapse collapse in dap-ais-category-list">
+        <ul class="row">
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/fhqs.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk2-1" onclick="check()" class="check_switch" >
+                    <label for="cateChk2-1" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">防火墙上行峰值带宽</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/fhqx.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk2-2" class="check_switch" >
+                    <label for="cateChk2-2" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">防火墙下行峰值带宽</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/fhqr.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk2-3" class="check_switch" >
+                    <label for="cateChk2-3" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">防火墙入流量</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">3台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/fhqc.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk2-4" class="check_switch" >
+                    <label for="cateChk2-4" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">防火墙出流量</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/fzjh.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk2-5" class="check_switch" >
+                    <label for="cateChk2-5" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">负载均衡器并发连接</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/fzjhdk.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk2-6" class="check_switch" >
+                    <label for="cateChk2-6" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">负载均衡器峰值带宽</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/fzjhcpu.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk2-7" class="check_switch" >
+                    <label for="cateChk2-7" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">负载均衡器CPU</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/fzjhzf.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk2-8" class="check_switch" >
+                    <label for="cateChk2-8" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">负载均衡器转发情况</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2台</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--列表END-->
+    </div>
+    <!--网络设备情况END-->
+    <!--数据库情况START-->
+    <div id="" class="dap-ais-category-set-box">
+      <div class="dap-ais-category-ttl" >
+        <!--类型图标START-->
+        <div class="dap-ais-category-ico-box">
+          <!-- <div class="dap-ais-rotate rotate"></div> -->
+          <div class="dap-ais-category-ico">
+            <span class="icon-sjkqk"></span>
+          </div>
+          <div class="dap-ais-category-checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox3" class="check_switch">
+            <label for="checkbox3" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+          </div>
+        </div>
+        <!--类型图标END-->
+        <!--类型名称START-->
+        <div class="dap-ais-category-ttl-con" data-toggle="collapse" data-parent="#accordion" data-target="#categoryList3">
+          <h3>数据库情况</h3>
+          <div class="dap-ais-category-info">共5项，已选择<span class="c-orange">5项</span></div>
+          <div class="dap-ais-collapse-btn"><i class="fa fa-angle-up"></i></div>
+        </div><div class="clearfix"></div>
+        <!--类型名称END-->
+      </div>
+      <!--列表START-->
+      <div id="categoryList3" class="panel-collapse collapse in dap-ais-category-list">
+        <ul class="row">
+          <li class="">
+            <div class="dap-ais-category-outer" >
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/cpuzy.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk3-1" class="check_switch" >
+                    <label for="cateChk3-1" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">CPU占用</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2实例</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/sjkrz.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk3-2" class="check_switch" >
+                    <label for="cateChk3-2" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">数据库日志</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2实例</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/hhs.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk3-3" class="check_switch" >
+                    <label for="cateChk3-3" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">会话数</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2实例</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/bkjsyl.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk3-4" class="check_switch" >
+                    <label for="cateChk3-4" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">表空间使用率</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2实例</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/bsuo.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk3-5" class="check_switch" >
+                    <label for="cateChk3-5" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">表锁情况</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">2实例</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--列表END-->
+    </div>
+    <!--数据库情况END-->
+    <!--服务器情况START-->
+    <div id="" class="dap-ais-category-set-box">
+      <div class="dap-ais-category-ttl" >
+        <!--类型图标START-->
+        <div class="dap-ais-category-ico-box">
+          <!-- <div class="dap-ais-rotate rotate"></div> -->
+          <div class="dap-ais-category-ico">
+            <span class="icon-fwqqk"></span>
+          </div>
+          <div class="dap-ais-category-checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox4" class="check_switch">
+            <label for="checkbox4" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+          </div>
+        </div>
+        <!--类型图标END-->
+        <!--类型名称START-->
+        <div class="dap-ais-category-ttl-con" data-toggle="collapse" data-parent="#accordion" data-target="#categoryList4">
+          <h3>服务器情况</h3>
+          <div class="dap-ais-category-info">共6项，已选择<span class="c-orange">6项</span></div>
+          <div class="dap-ais-collapse-btn"><i class="fa fa-angle-up"></i></div>
+        </div><div class="clearfix"></div>
+        <!--类型名称END-->
+      </div>
+      <!--列表START-->
+      <div id="categoryList4" class="panel-collapse collapse in dap-ais-category-list">
+        <ul class="row">
+          <li class="">
+            <div class="dap-ais-category-outer" >
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/cpuzy.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk4-1" class="check_switch" >
+                    <label for="cateChk4-1" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">CPU占用</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">20台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/cpuwd.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk4-2" class="check_switch" >
+                    <label for="cateChk4-2" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">CPU温度</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">20台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/nczy.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk4-3" class="check_switch" >
+                    <label for="cateChk4-3" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">内存占用</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">20台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/cpkj.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk4-4" class="check_switch" >
+                    <label for="cateChk4-4" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">磁盘空间</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">20台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/cpio.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk4-5" class="check_switch" >
+                    <label for="cateChk4-5" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">磁盘IO</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">20台</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/xtrz.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk4-6" class="check_switch" >
+                    <label for="cateChk4-6" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">系统日志</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">20台</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--列表END-->
+    </div>
+    <!--服务器情况END-->
+    <!--话单情况START-->
+    <div id="" class="dap-ais-category-set-box">
+      <div class="dap-ais-category-ttl" >
+        <!--类型图标START-->
+        <div class="dap-ais-category-ico-box">
+          <!-- <div class="dap-ais-rotate rotate"></div> -->
+          <div class="dap-ais-category-ico">
+            <span class="icon-hdqk"></span>
+          </div>
+          <div class="dap-ais-category-checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox5" class="check_switch">
+            <label for="checkbox5" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+          </div>
+        </div>
+        <!--类型图标END-->
+        <!--类型名称START-->
+        <div class="dap-ais-category-ttl-con" data-toggle="collapse" data-parent="#accordion" data-target="#categoryList5">
+          <h3>话单情况</h3>
+          <div class="dap-ais-category-info">共5项，已选择<span class="c-orange">5项</span></div>
+          <div class="dap-ais-collapse-btn"><i class="fa fa-angle-up"></i></div>
+        </div><div class="clearfix"></div>
+        <!--类型名称END-->
+      </div>
+      <!--列表START-->
+      <div id="categoryList5" class="panel-collapse collapse in dap-ais-category-list">
+        <ul class="row">
+          <li class="">
+            <div class="dap-ais-category-outer" >
+              <!-- <div class="dap-ais-category-border"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/kdhdl.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk5-1" class="check_switch" >
+                    <label for="cateChk5-1" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">宽带话单量</p>
+                <!-- <p class="ma-num">20台</p> -->
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/wlanhdl.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk5-2" class="check_switch" >
+                    <label for="cateChk5-2" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">WLAN话单量</p>
+               <!--  <p class="ma-num">20台</p> -->
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/myhdl.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk5-3" class="check_switch" >
+                    <label for="cateChk5-3" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">漫游话单量</p>
+                <!-- <p class="ma-num">20台</p> -->
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/vpdnhdl.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk5-4" class="check_switch" >
+                    <label for="cateChk5-4" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">VPDN话单量</p>
+                <!-- <p class="ma-num">20台</p> -->
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border" ></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/cdl.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk5-5" class="check_switch" >
+                    <label for="cateChk5-5" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">错单量</p>
+                <!-- <p class="ma-num">20台</p> -->
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--列表END-->
+    </div>
+    <!--话单情况END-->
+    <!--VIP用户情况START-->
+    <div id="" class="dap-ais-category-set-box">
+      <div class="dap-ais-category-ttl" >
+        <!--类型图标START-->
+        <div class="dap-ais-category-ico-box">
+          <!-- <div class="dap-ais-rotate rotate"></div> -->
+          <div class="dap-ais-category-ico">
+            <span class="icon-vipqk"></span>
+          </div>
+          <div class="dap-ais-category-checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox6" class="check_switch" >
+            <label for="checkbox6" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+          </div>
+        </div>
+        <!--类型图标END-->
+        <!--类型名称START-->
+        <div class="dap-ais-category-ttl-con" data-toggle="collapse" data-parent="#accordion" data-target="#categoryList6">
+          <h3>VIP用户使用情况</h3>
+          <div class="dap-ais-category-info">共2项，已选择<span class="c-orange">2项</span></div>
+          <div class="dap-ais-collapse-btn"><i class="fa fa-angle-up"></i></div>
+        </div><div class="clearfix"></div>
+        <!--类型名称END-->
+      </div>
+      <!--列表START-->
+      <div id="categoryList6" class="panel-collapse collapse in dap-ais-category-list">
+        <ul class="row">
+          <li class="">
+            <div class="dap-ais-category-outer" >
+              <!-- <div class="dap-ais-category-border" data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/jtkd.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk6-1" class="check_switch" >
+                    <label for="cateChk6-1" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">家庭宽带</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">7个</p>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="dap-ais-category-outer">
+              <!-- <div class="dap-ais-category-border"  data-toggle="modal" data-target="#myModal"></div> -->
+              <div class="dap-ais-category-con">
+                <div class="icon-box">
+                  <img src="images/categoryIcon/wlan.png" class="img-responsive" />
+                  <div class="dap-ais-category-checkbox">
+                    <input type="checkbox" name="checkbox" id="cateChk6-2" class="check_switch" >
+                    <label for="cateChk6-2" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+                  </div>
+                </div>
+                <p class="info">WLAN</p>
+                <p class="ma-num" data-toggle="modal" data-target="#myModal">8个</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--VIP用户情况END-->
+    <div class="dap-ais-set-btnarea"><button class="dap-ais-btn">保存设置</button></div>
+</div>
+    <!--巡检项定义END-->
+  </div>
+</div>
+<!--弹框-->
+<div class="modal fade dap-ais-category-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="width:500px">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">巡检主机</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-striped table-hover dap-ais-category-table">
+          <tr>
+            <th></th>
+            <th>主机名</th>
+            <th>主机IP</th>
+          </tr>
+          <tr>
+            <td width="40">
+              <div class="dap-ais-category-checkbox">
+                <input type="checkbox" name="checkbox" id="modalChk1" class="check_switch" >
+                <label for="modalChk1" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+              </div>
+            </td>
+            <td>radius1</td>
+            <td>192.168.1.1</td>
+          </tr>
+          <tr>
+            <td width="40">
+              <div class="dap-ais-category-checkbox">
+                <input type="checkbox" name="checkbox" id="modalChk2" class="check_switch" >
+                <label for="modalChk2" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+              </div>
+            </td>
+            <td>radius1</td>
+            <td>192.168.1.1</td>
+          </tr>
+          <tr>
+            <td width="40">
+              <div class="dap-ais-category-checkbox">
+                <input type="checkbox" name="checkbox" id="modalChk3" class="check_switch" >
+                <label for="modalChk3" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+              </div>
+            </td>
+            <td>radius1</td>
+            <td>192.168.1.1</td>
+          </tr>
+          <tr>
+            <td width="40">
+              <div class="dap-ais-category-checkbox">
+                <input type="checkbox" name="checkbox" id="modalChk4" class="check_switch" >
+                <label for="modalChk4" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+              </div>
+            </td>
+            <td>radius1</td>
+            <td>192.168.1.1</td>
+          </tr>
+          <tr>
+            <td width="40">
+              <div class="dap-ais-category-checkbox">
+                <input type="checkbox" name="checkbox" id="modalChk5" class="check_switch" >
+                <label for="modalChk5" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+              </div>
+            </td>
+            <td>radius1</td>
+            <td>192.168.1.1</td>
+          </tr>
+          <tr>
+            <td width="40">
+              <div class="dap-ais-category-checkbox">
+                <input type="checkbox" name="checkbox" id="modalChk6" class="check_switch" >
+                <label for="modalChk6" class="check_switch_slider"><span class="swi_check"><i class="checked"></i></span></label>
+              </div>
+            </td>
+            <td>radius1</td>
+            <td>192.168.1.1</td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn dap-ais-btn-cancel" data-dismiss="modal">取消</button>
+        <button type="button" class="btn dap-ais-btn">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

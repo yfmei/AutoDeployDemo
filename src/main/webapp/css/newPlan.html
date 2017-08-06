@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>自动巡检</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/icon-style.css" rel="stylesheet"  type="text/css" >
+    <link href="css/plugin/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="all" />
+     <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="css/ais.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
+    <script type="text/javascript"  src="js/plugin/moment.js"></script>
+    <script type="text/javascript"  src="js/plugin/daterangepicker.js"></script>
+  </head>
+  <body>
+   <!--头部-->
+  <div class="container-fluid topbar">
+    <div class="row topbar-row">
+      <div class="pull-left">你好，王小青，&nbsp;<a href="#">退出</a></div>
+      <div class="pull-right">
+        <a href="#">业务监控</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#">数据分析</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#">宽带地图</a>
+      </div>
+    </div>
+  </div>
+<!--内容区域-->
+
+  <div class="container dap-ais-mainarea">
+  <!--标题-->
+  <div class="dap-ais-mainttl">
+    <i class="icon fa fa-cogs"></i>&nbsp;&nbsp;宽带巡检助手
+  </div>
+  <div class="dap-ais-mainarea-bg">
+    <!--新计划-->
+    <div class="panel dap-ais-newpanel">
+      <div class="panel-heading"><i class="dap-ais-newplan-ico"></i> 制定巡检计划</div>
+      <div class="panel-body">
+        <form class="form-horizontal dap-ais-plan-form" role="form">
+          <div class="form-group">
+            <label for="ttl" class="col-sm-2 control-label">报告标题</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control input-lg" style="width:70%" id="ttl" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="time" class="col-sm-2 control-label">巡检时间</label>
+            <div class="col-sm-10 form-inline">
+              <select id="changeCyc" class="form-control" onchange="changeEle()">
+                <option value="year" selected="selected">每年</option>
+                <option value="month">每月</option>
+                <option value="week">每周</option>
+                <option value="day">每天</option>
+              </select>
+              <select class="form-control" id="monthSel">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+              </select>
+              <label class="dap-ais-label-inline" id="monthLabel">月</label>
+              <select class="form-control" id="daySel">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>24</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+              </select>
+              <label class="dap-ais-label-inline" id="dayLabel">日</label>
+              <select class="form-control" id="weekdaySel" style="display:none">
+                <option>周日</option>
+                <option>周一</option>
+                <option>周二</option>
+                <option>周三</option>
+                <option>周四</option>
+                <option>周五</option>
+                <option>周六</option>
+              </select>
+              <select class="form-control" id="hourSel">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+              </select>
+              <label class="dap-ais-label-inline" id="hourLabel">点</label>
+              <select class="form-control" id="minSel">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+              </select>
+              <label class="dap-ais-label-inline" id="minLabel">分</label>
+            </div>
+          </div>
+          <!--巡检类型START-->
+          <div class="form-group">
+            <div class="dap-ais-ttl">
+              <label class="col-xs-2 control-label">巡检类别</label>
+              <span class="col-xs-2 pull-right"><a href="categorySet.html">高级设置</a></span>
+              <div class="clearfix"></div>
+            </div>
+            <div class="dap-ais-chklist">
+              <div class="col-xs-4 col-md-4 dap-ais-categorybox">
+                <a href="###" class="dap-ais-category">
+                  <div class="dap-ais-circle-box">
+                    <div class="dap-ais-circle-scale"></div>
+                    <div class="dap-ais-circle">
+                      <span class="icon-ywqk"></span>
+                      <!-- <span class="badge">&radic;</span> -->
+                      <span class="fa fa-check-square-o dap-ais-check"></span>
+                      <span class="dap-ais-nochoose-txt">不检查</span>
+                    </div>
+                  </div>
+                  <p class="dap-ais-name">业务量情况</p>
+                  <p class="dap-ais-info">检查业务量情况</p>
+                </a> 
+              </div>
+              <div class="col-xs-4 col-md-4 dap-ais-categorybox">
+                <a href="###" class="dap-ais-category">
+                  <div class="dap-ais-circle-box">
+                    <div class="dap-ais-circle-scale"></div>
+                    <div class="dap-ais-circle">
+                      <span class="icon-wlsbqk"></span>
+                      <span class="fa fa-check-square-o dap-ais-check"></span>
+                      <span class="dap-ais-nochoose-txt">不检查</span>
+                    </div>
+                  </div>
+                  <p class="dap-ais-name">网络设备情况</p>
+                  <p class="dap-ais-info">检查各网络设备流量带宽情况</p>
+                </a> 
+              </div>
+              <div class="col-xs-4 col-md-4 dap-ais-categorybox">
+                <a href="###" class="dap-ais-category">
+                  <div class="dap-ais-circle-box">
+                    <div class="dap-ais-circle-scale"></div>
+                    <div class="dap-ais-circle">
+                      <span class="icon-sjkqk"></span>
+                      <span class="fa fa-check-square-o dap-ais-check"></span>
+                      <span class="dap-ais-nochoose-txt">不检查</span>
+                    </div>
+                  </div>
+                  <p class="dap-ais-name">数据库情况</p>
+                  <p class="dap-ais-info">检查数据库运行情况</p>
+                </a> 
+              </div>
+              <div class="col-xs-4 col-md-4 dap-ais-categorybox">
+                <a href="###" class="dap-ais-category">
+                  <div class="dap-ais-circle-box">
+                    <div class="dap-ais-circle-scale"></div>
+                    <div class="dap-ais-circle">
+                      <span class="icon-fwqqk"></span>
+                      <span class="fa fa-check-square-o dap-ais-check"></span>
+                      <span class="dap-ais-nochoose-txt">不检查</span>
+                    </div>
+                  </div>
+                  <p class="dap-ais-name">服务器情况</p>
+                  <p class="dap-ais-info">检查各主机资源占用、服务情况</p>
+                </a> 
+              </div>
+              <div class="col-xs-4 col-md-4 dap-ais-categorybox">
+                <a href="###" class="dap-ais-category">
+                  <div class="dap-ais-circle-box">
+                    <div class="dap-ais-circle-scale"></div>
+                    <div class="dap-ais-circle">
+                      <span class="icon-hdqk"></span>
+                      <span class="fa fa-check-square-o dap-ais-check"></span>
+                      <span class="dap-ais-nochoose-txt">不检查</span>
+                    </div>
+                  </div>
+                  <p class="dap-ais-name">话单情况</p>
+                  <p class="dap-ais-info">检查话单情况</p>
+                </a> 
+              </div>
+              <div class="col-xs-4 col-md-4 dap-ais-categorybox">
+                <a href="###" class="dap-ais-category">
+                  <div class="dap-ais-circle-box">
+                    <div class="dap-ais-circle-scale"></div>
+                    <div class="dap-ais-circle">
+                      <span class="icon-vipqk"></span>
+                      <span class="fa fa-check-square-o dap-ais-check"></span>
+                      <span class="dap-ais-nochoose-txt">不检查</span>
+                    </div>
+                  </div>
+                  <p class="dap-ais-name">VIP用户使用情况</p>
+                  <p class="dap-ais-info">检查VIP用户使用情况</p>
+                </a> 
+              </div>
+            </div>
+          </div>
+          <!--巡检类型END-->
+          <div class="form-group">
+            <label for="ttl" class="col-sm-2 control-label">邮件抄送</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control input-lg" style="width:70%" id="ttl" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ttl" class="col-sm-2 control-label">系统通知</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control input-lg" style="width:70%" id="ttl" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ttl" class="col-sm-2 control-label">短信提醒</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control input-lg" style="width:70%" id="ttl" />
+            </div>
+          </div>
+          <div class="">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button class="dap-ais-btn big">保存计划</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+</body>
+</html>
